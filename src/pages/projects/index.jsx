@@ -1,3 +1,4 @@
+import { getAllProjects } from "../../api/projects";
 import ProjectCard from "../../components/ProjectCard";
 import "./style.css";
 const dummyData = [
@@ -34,10 +35,11 @@ const dummyData = [
 ];
 
 function Projects() {
+	getAllProjects();
 	return (
 		<div className="Projects">
 			{dummyData.map((project) => (
-				<ProjectCard project={project} />
+				<ProjectCard key={project.image} project={project} />
 			))}
 		</div>
 	);

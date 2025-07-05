@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"checkJs": true,
+		"jsx": "react-jsx",
+		"baseUrl": "src",
+		"module": "esnext",
+		"target": "es2020",
+		"moduleResolution": "node"
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/node_modules/*"]
+}
