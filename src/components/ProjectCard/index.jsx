@@ -9,7 +9,7 @@ function ProjectCard({ project }) {
 			</div>
 			<div className="ProjectCard__Description">
 				<p>
-					<span>Genre:</span> {project.genre}
+					<span>Genres:</span> {project.genre}
 				</p>
 				<p>
 					<span>Team:</span> {project.team}
