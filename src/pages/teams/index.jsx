@@ -1,38 +1,19 @@
+import { useEffect, useState } from "react";
 import TeamCard from "../../components/TeamCard";
 import "./style.css";
-const dummyData = [
-	{
-		name: "Team 1",
-		image: "https://placehold.jp/150x150.png",
-		members: "Mugiwara, ZOro, Sanji",
-	},
-	{
-		name: "Team 2",
-		image: "https://placehold.jp/150x150.png?text=Team",
-		members: "Straw Hats",
-	},
-	{
-		name: "Team 3",
-		image: "https://placehold.jp/150x150.png?text=Team",
-		members: "Skynet",
-	},
-	{
-		name: "Team 4",
-		image: "https://placehold.jp/150x150.png?text=Team",
-		members: "FitCoders",
-	},
-	{
-		name: "Team 5",
-		image: "https://placehold.jp/150x150.png?text=Team",
-		members: "Solo Dev",
-	},
-];
+import { getAllTeams } from "../../api/teams";
 
 function Teams() {
+	const [teams, setTeams] = useState([]);
+
+	useEffect(() => {
+		getAllTeams().then((res) => setTeams(res));
+	}, []);
+
 	return (
 		<div className="Teams">
-			{dummyData.map((team) => (
-				<TeamCard team={team} />
+			{teams.map((team) => (
+				<TeamCard key={team._id} team={team} />
 			))}
 		</div>
 	);
