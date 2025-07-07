@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
 		>
 			<h1 className="ProjectCard__Title">{project.title}</h1>
 			<div className="ProjectCard__Image">
-				<img src={project.image} alt="" />
+				<img src={project.imgUrl} alt="" />
 			</div>
 			<div className="ProjectCard__Description">
 				<p>
