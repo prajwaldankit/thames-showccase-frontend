@@ -12,11 +12,11 @@ const links = [
 	},
 	{
 		path: "/submit",
-		name: "Submit your Project",
+		name: "Create project",
 	},
 	{
-		path: "/login",
-		name: "Login and view your progress",
+		path: "/team-register",
+		name: "Register team",
 	},
 ];
 
@@ -28,8 +28,9 @@ function Navbar() {
 			{links.map((link) => (
 				<div
 					key={link.path}
-					className={`Navbar__link ${location.pathname === link.path ? "--active" : ""
-						}`}
+					className={`Navbar__link ${
+						location.pathname === link.path ? "--active" : ""
+					}`}
 				>
 					<a href={link.path}>{link.name}</a>
 				</div>

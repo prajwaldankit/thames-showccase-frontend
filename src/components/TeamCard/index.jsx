@@ -5,7 +5,7 @@ function TeamCard({ team }) {
 		<div className="TeamCard">
 			<h1 className="TeamCard__Title">{team.name}</h1>
 			<div className="TeamCard__Image">
-				<img src={team.image} alt="" />
+				<img src={team.imgUrl} alt="" />
 			</div>
 			<div className="TeamCard__Description">
 				<p>
