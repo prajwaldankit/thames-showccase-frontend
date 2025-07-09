@@ -5,7 +5,7 @@ const CreateProjectForm = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		genre: "",
-		imgUrl: "",
+		imgUrl: null,
 		team: "",
 	});
 
@@ -121,4 +121,3 @@ const CreateProjectForm = () => {
 };
 
 export default CreateProjectForm;
-

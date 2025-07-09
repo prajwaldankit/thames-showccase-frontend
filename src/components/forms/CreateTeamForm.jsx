@@ -4,7 +4,7 @@ import { createTeam } from "../../api/teams";
 const CreateTeamForm = () => {
 	const [formData, setFormData] = useState({
 		name: "",
-		imgUrl: "",
+		imgUrl: null,
 		members: "",
 	});
 

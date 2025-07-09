@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
 			className="ProjectCard"
 			onClick={() => navigate(`/projects/${project._id}`)}
 		>
-			<h1 className="ProjectCard__Title">{project.title}</h1>
+			<h1 className="ProjectCard__Title">{project.name}</h1>
 			<div className="ProjectCard__Image">
 				<img src={project.imgUrl} alt="" />
 			</div>
